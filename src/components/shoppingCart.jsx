@@ -1,16 +1,15 @@
 import React from "react";
 import Product from "./product";
 
-class ShoppingCart extends React.Component {
 
+class ShoppingCart extends React.Component {
     render() { 
         return (
             <React.Fragment>
-                <h1>Shopping Cart</h1> 
+                <h4 className="m-2">Shopping Cart</h4> 
                 <button onClick={this.props.onReset} className="btn btn-secondary m-2">Reset</button>          
-                     {this.props.products.map(product=>
-                         <Product  key={product.id} product={product} onIncrement={this.props.onIncrement} onDelete={this.props.onDelete}/>
-                     )}         
+                     {this.props.products.filter(product=>product.isInCart===true)
+                     .map(p=>(<Product key={p.id} product={p} onIncrement={this.props.onIncrement} onDelete={this.props.onDelete}/>))}                         
             </React.Fragment>
         );
     }

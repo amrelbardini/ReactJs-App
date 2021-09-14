@@ -14,3 +14,38 @@
     background-color:#f5f5f5;
     height: 100vh;
 }
+.custom-list-props a{
+    text-decoration: none;
+    color:#333;
+    font-size:16px;
+    font-weight: 500;
+    line-height: 1px;
+}
+.custom-list-props {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.custom-list-props:hover{
+    color:#333;
+}
+.sidebar{
+    background-color: #eee;
+    height: 100vh;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+.text-holder{
+    background-color: #eee;
+    padding:20px;
+    border-radius: 20px;
+    margin:10px;
+}
+.form-container{
+    background-color: #eee;
+    padding:20px;
+    border-radius: 20px;
+    margin:30px;
+    border:1px solid #ccc;
+    width:300px;
+  
+}
