@@ -15,7 +15,7 @@ class Product extends React.Component {
     return (
         <React.Fragment>
             {this.props.product.count===0 && <h6 className="lead m-2" style={{fontWeight:"bold"}}>No products at the moment</h6>}
-                <div className="row">
+                <div className="row row-reset">
                         <div className="col-2">
                             <Link style={{textDecoration:"none"}} to={`/products/${this.props.product.id}`} className="custom-color m-2 text-capitalize" >{this.props.product.name}</Link>
                         </div>

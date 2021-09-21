@@ -9,6 +9,7 @@ import ProductDetails from './productDetails';
 import Notfound from './notfound';
 import Menu from './menu';
 import Login from './login';
+import Footer from './footer';
 
 
 
@@ -72,11 +73,18 @@ class App extends React.Component {
        //setstate  
  
     }
+    handleNavbar=(e)=>{
+        //fix this code later!!!! VIP
+        let targetElement=document.querySelector('.navbar-collapse');
+        console.log("navbar opened",targetElement);
+        targetElement.classList.toggle('show');
+        console.log("navbar opened",targetElement);
+    }
     render() { 
         return (
         <React.Fragment>
-            <Navbar  productsCount={this.state.products.filter(p=>p.count>0).length}/>
-                    <main className="container-fluid">
+            <Navbar  handleNavbar={this.handleNavbar} productsCount={this.state.products.filter(p=>p.count>0).length}/>
+                    <main>
                         <Switch> 
                             <Route path="/about" component={About}/>
                             <Route path="/products/:id" render={(props)=>{
@@ -104,7 +112,8 @@ class App extends React.Component {
                             <Redirect from="/home" to="/"/>
                             <Redirect to="/notfound"/>
                         </Switch>  
-                    </main> 
+                    </main>
+                    <Footer/> 
         </React.Fragment>
         );
     }

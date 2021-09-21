@@ -21,24 +21,14 @@
     font-weight: 500;
     line-height: 1px;
 }
-.custom-list-props {
-    margin-top:20px;
-    margin-bottom:20px;
-}
-.custom-list-props:hover{
-    color:#333;
-}
-.sidebar{
-    background-color: #eee;
-    height: 100vh;
-    padding: 10px;
-    border: 1px solid #eee;
-}
+
+
 .text-holder{
     background-color: #eee;
     padding:20px;
     border-radius: 20px;
     margin:10px;
+    font-size: 14px;
 }
 .form-container{
     background-color: #eee;
@@ -47,5 +37,109 @@
     margin:30px;
     border:1px solid #ccc;
     width:300px;
-  
+}
+.nav-link{
+    font-size: 12px;
+}
+.error-msg{
+    height: 30px;
+    margin-top: 2px;
+    text-align: center;
+    line-height: 0px;
+}
+.navbar{
+    padding:0;
+    z-index: 2;
+}
+
+.overlay{
+    width:100%;
+    position:absolute;
+    height: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:black;
+    opacity: 0.3;
+    z-index: 1;
+
+}
+.show{
+    display: block !important;
+}
+/*start about page properties*/
+.row-reset{
+    margin-left:0;
+    margin-right: 0;
+}
+.row-reset .custom-list-props {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.sidebar{
+    background-color: #eee;
+    height: 100vh;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+.row-reset .sidebar ul li a{
+    font-size:10px;
+
+}
+.row-reset .sidebar ul li a:hover{
+    color:red;
+
+}
+/*end about page properties*/
+/*start home page properties*/
+.home{
+    position: relative;
+    background-image: url('../images/home.jpg');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width:100%;
+    background-size: cover; 
+    background-position: center center;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.home .heading{
+    position: relative;
+    z-index: 2;
+    color:#eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left:20px;
+    width:450px;
+    background-color:#333;
+    height: 300px;
+    border-radius: 20px;
+    padding:20px
+}
+.home .heading h2{
+   margin-top:10px;
+   font-size: 20px;
+   text-align: center;
+   margin:auto;
+   margin-bottom:20px;
+   margin-top:0px;
+}
+.home .heading .text-content{
+    display: block;
+    width:100%
+}
+.footer{
+    background-color:#333;
+    color:#fff;
+    font-size: 16px;
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    bottom:0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }

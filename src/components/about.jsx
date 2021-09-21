@@ -7,8 +7,8 @@ class About extends React.Component {
     render() { 
         return (
             <React.Fragment>
-                <div className="row">
-                    <div className="col-2 sidebar">
+                <div className="row row-reset">
+                    <div className="col-1 sidebar">
                         <ul className="list-unstyled">
                             <li className="custom-list-props">
                                 <Link  className="text-capitalize " to="/about/company">1-Company info</Link>

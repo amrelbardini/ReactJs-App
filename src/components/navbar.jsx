@@ -7,9 +7,12 @@ const Navbar = (props) => {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" to="/home">
-                        <i className="fab fa-react" style={{color:"#00d8ff",fill:"#00d8ff"}}></i>
+                         <i className="fab fa-react" style={{color:"#00d8ff",fill:"#00d8ff"}}></i>
+                        <span className="badge bg-danger m-2">
+                            {props.productsCount}
+                        </span>        
                     </NavLink>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button onClick={props.handleNavbar} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
@@ -24,16 +27,14 @@ const Navbar = (props) => {
                                 <NavLink className="nav-link"  to="/about">About</NavLink>
                             </li>
                             <li className="nav-item">
-                                 <NavLink className="nav-link"  to="/contact">Contact Us</NavLink>
+                                 <NavLink className="nav-link"  to="/contact">Contact us</NavLink>
                             </li>
                             <li className="nav-item">
                                  <NavLink className="nav-link"  to="/login">login</NavLink>
                             </li>
                         </ul>
                     </div>
-                    <span className="badge bg-primary">
-                        {props.productsCount}
-                    </span>
+                    
                 </div>
             </nav>
     </React.Fragment>
