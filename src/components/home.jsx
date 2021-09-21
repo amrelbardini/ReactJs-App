@@ -13,8 +13,7 @@ class Home extends React.Component {
                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellendus iste, sunt similique placeat rerum, in sed nulla fuga sapiente ad, voluptates perspiciatis hic vitae est consequuntur earum adipisci quod.
                              </p>
                         </div>
-                     </div>
-                                       
+                     </div>                    
                </div>
           </React.Fragment>
 

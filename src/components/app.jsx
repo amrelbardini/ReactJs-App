@@ -23,7 +23,11 @@ class App extends React.Component {
             {id:4,name:"Medium Burger",isInCart:false,count:1,price:"30 $"},
             {id:5,name:"Large Burger",isInCart:false,count:1,price:"35 $"},
             {id:6,name:"Cola",isInCart:false,count:1,price:"5  $"},
+            {id:7,name:"Lemon Juice",isInCart:false,count:1,price:"5  $"},
+            {id:8,name:"Orange Juice",isInCart:false,count:1,price:"5  $"},
+            {id:9,name:"large fries",isInCart:false,count:1,price:"15  $"},
         ],
+        NavState:false,
     }
  
     getClasses(){
@@ -74,16 +78,19 @@ class App extends React.Component {
  
     }
     handleNavbar=(e)=>{
-        //fix this code later!!!! VIP
-        let targetElement=document.querySelector('.navbar-collapse');
-        console.log("navbar opened",targetElement);
-        targetElement.classList.toggle('show');
-        console.log("navbar opened",targetElement);
+        //clone 
+         const state=this.state;
+           //edit 
+         state.NavState?state.NavState=false:state.NavState=true;
+         //setState
+         console.log(state.NavState);
+         this.setState({state});
     }
+  
     render() { 
         return (
         <React.Fragment>
-            <Navbar  handleNavbar={this.handleNavbar} productsCount={this.state.products.filter(p=>p.count>0).length}/>
+            <Navbar NavState={this.state.NavState}  handleNavbar={this.handleNavbar} productsCount={this.state.products.filter(p=>p.count>0).length}/>
                     <main>
                         <Switch> 
                             <Route path="/about" component={About}/>
