@@ -8,6 +8,7 @@ import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 import './css/main.css';
 
 
+
 //main component
 // import ShoppingCart from './components/shoppingCart';
 import App from './components/app';

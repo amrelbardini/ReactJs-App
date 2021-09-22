@@ -13,6 +13,7 @@ import Footer from './footer';
 
 
 
+
 class App extends React.Component {
 
     state={
@@ -77,7 +78,7 @@ class App extends React.Component {
        //setstate  
  
     }
-    handleNavbar=(e)=>{
+    handleNavbar=()=>{
         //clone 
          const state=this.state;
            //edit 
