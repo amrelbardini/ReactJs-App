@@ -3,7 +3,7 @@ import React from 'react';
 const Cart = (props) => {
     let style={color:"#ccc",cursor:"pointer"};
      if(props.product.isInCart===true){
-         style={color:"#333",cursor:"pointer"};
+         style.color="#333";
      }
         return (  
             <React.Fragment>

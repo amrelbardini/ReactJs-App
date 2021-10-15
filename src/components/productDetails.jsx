@@ -15,18 +15,20 @@ class ProductDetails extends React.Component {
         console.log(res); 
         return (
             <React.Fragment>
-                <h2> Product Details</h2>
-                <h6 className="text-capitalize">
-                    name : {targetProduct.name}
-                </h6>
-                <h6 className="text-capitalize">
-                    ID : {targetProduct.id}
-                </h6>
-                <h6 className="text-capitalize">
-                    count : {targetProduct.count}
-                </h6>
-                <button onClick={this.handleSave} className="btn btn-primary">Save</button>
-   </React.Fragment>
+                <div className="container-fluid">
+                    <h2 className="h5"> Product Details</h2>
+                    <h6 className="text-capitalize">
+                        name : {targetProduct.name}
+                    </h6>
+                    <h6 className="text-capitalize">
+                        ID : {targetProduct.id}
+                    </h6>
+                    <h6 className="text-capitalize">
+                        count : {targetProduct.count}
+                    </h6>
+                    <button onClick={this.handleSave} className="btn btn-warning" style={{color:"white"}}>Back</button>
+                </div>    
+           </React.Fragment>
         );
     }
 }

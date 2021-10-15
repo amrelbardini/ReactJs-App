@@ -1,34 +1,54 @@
 import React from 'react';
 
-import Joi  from 'joi-browser';
+import Joi, { errors }  from 'joi-browser';
 class Login extends React.Component {
 
     state={
         username:"",
         password:"",
-        errors:{},
-    }
+        errors:{
+            username:"",
+            password:"",
+        }
+    };
      schema={
-         username:Joi.string().required(),
+         username:Joi.string().min(3).max(30).required(),
          password:Joi.string().required(),
-     }
+      }
      validate=()=>{
-        //Joi validate function takes 2 inputs, the first one is the state the 2nd one is the schema to compare and returns an error object
-        // third option to cancel the abort early( return the first error only) false returns all errors
-        //clone state 
 
-      //manual validation example
-       const errors={};
-       if(this.state.username.trim()===""){
-           errors.username="Username is required";
-       }
-       if(this.state.password.trim()===""){
-           errors.password="Password is required";
-       }
-       //setstate 
-       this.setState({errors});
-       return Object.keys(errors).length===0? null:errors;
- 
+    //Joi validate function takes 2 inputs, the first one is the state the 2nd one is the schema to compare and returns an error object
+    // third option to cancel the abort early( return the first error only) false returns all errors
+    //clone state 
+
+    //   //manual validation example
+    //    const errors={};
+    //    if(this.state.username.trim()===""){
+    //        errors.username="Username is required";
+    //    }
+    //    if(this.state.password.trim()===""){
+    //        errors.password="Password is required";
+    //    }
+    //    //setstate 
+    //    this.setState({errors});
+    //    return Object.keys(errors).length===0? null:errors;
+      const errors={};
+      //clone state 
+      let state={...this.state};
+      //edit 
+      delete state.errors;
+      const res= Joi.validate(this.state,this.schema,{abortEarly:true}); 
+       //setstate
+      if(res.error===null){
+           this.setState({errors:{}});
+          return null;
+      } 
+      for(const error of res.error.details){
+          errors[error.path]=error.message;
+      }
+     //Set State
+     this.setState({ errors });
+     return errors;
    }
     handleSubmit=(e)=>{
         e.preventDefault();
@@ -37,6 +57,8 @@ class Login extends React.Component {
         const errors=this.validate();
         if(errors){
             //incase errors is not empty return without submitting
+            console.log(errors);
+
           return;
         }
         console.log("submit")

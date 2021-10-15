@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 class Product extends React.Component {
-    
+  
     getClasses() {
         return this.props.product.count===0?
         "badge  bg-warning m-2":
@@ -21,6 +21,7 @@ class Product extends React.Component {
                         </div>
                         <div className="col">
                             <span className={this.getClasses()}>{this.props.product.count}</span>
+                          
                             <button onClick={()=>{this.props.onIncrement(this.props.product)}} className="btn btn-success btn-sm">+</button>
                             <span onClick={()=>{this.props.onDelete(this.props.product)}} className="btn btn-danger m-2 btn-sm"> 
                                 <i className="fas fa-trash"></i>

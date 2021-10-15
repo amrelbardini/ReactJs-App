@@ -18,15 +18,15 @@ class App extends React.Component {
 
     state={
         products:[
-            {id:1,name:"burger",isInCart:false,count:1,price:"15 $"},
-            {id:2,name:"hotdog",isInCart:false,count:1,price:"15 $"},
-            {id:3,name:"fries",isInCart:false,count:1,price:"10 $"},
-            {id:4,name:"Medium Burger",isInCart:false,count:1,price:"30 $"},
-            {id:5,name:"Large Burger",isInCart:false,count:1,price:"35 $"},
+            {id:1,name:"burger",isInCart:false,count:1,price:"15 $",imgUrl:"../images/buffalo-burger.jpg"},
+            {id:2,name:"hotdog",isInCart:false,count:1,price:"15 $",imgUrl:"../images/fries.png"},
+            {id:3,name:"fries",isInCart:false,count:1,price:"10 $",imgUrl:"../images/fries.png"},
+            {id:4,name:"Medium Burger",isInCart:false,count:1,price:"30 $" ,imgUrl:"../images/fries.png"},
+            {id:5,name:"Large Burger",isInCart:false,count:1,price:"35 $" ,imgUrl:"../images/fries.png"},
             {id:6,name:"Cola",isInCart:false,count:1,price:"5  $"},
-            {id:7,name:"Lemon Juice",isInCart:false,count:1,price:"5  $"},
-            {id:8,name:"Orange Juice",isInCart:false,count:1,price:"5  $"},
-            {id:9,name:"large fries",isInCart:false,count:1,price:"15  $"},
+            {id:7,name:"Lemon Juice",isInCart:false,count:1,price:"5  $" ,imgUrl:"../images/fries.png"},
+            {id:8,name:"Orange Juice",isInCart:false,count:1,price:"5  $",imgUrl:"../images/fries.png"},
+            {id:9,name:"large fries",isInCart:false,count:1,price:"15  $" ,imgUrl:"../images/fries.png"},
         ],
         NavState:false,
     }

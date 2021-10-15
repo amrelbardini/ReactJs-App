@@ -24,9 +24,9 @@ class About extends React.Component {
                     <div className="col-10">
                         <div className="container">
                            <Switch>
-                                <Route path="/about/company" component={Company} ></Route>
-                                <Route path="/about/team" component={Team} ></Route>
-                                <Route path="/about/careers" component={Career} ></Route>
+                                <Route path="/about/company" component={Company}></Route>
+                                <Route path="/about/team" component={Team}></Route>
+                                <Route path="/about/careers" component={Career}></Route>
                            </Switch>
                         </div>
                     </div> 

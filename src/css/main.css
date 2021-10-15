@@ -42,10 +42,9 @@
     font-size: 12px;
 }
 .error-msg{
-    height: 30px;
+    min-height: 30px;
     margin-top: 2px;
     text-align: center;
-    line-height: 0px;
 }
 .navbar{
     padding:0;
@@ -68,6 +67,8 @@
 .show{
     display: block !important;
 }
+/*Start shopping cart props*/
+
 /*start about page properties*/
 .row-reset{
     margin-left:0;
